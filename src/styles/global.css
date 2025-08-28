@@ -1,0 +1,5 @@
+body {
+  background-image: url('/public/images/textures/3.png');
+  background-attachment: fixed; /* (Optionnel) Fixe le fond lorsque vous faites défiler la page */
+  background-size: auto; /* (Optionnel) Taille de la texture, "auto" est souvent bon pour les textures */
+}

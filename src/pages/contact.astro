@@ -1,0 +1,147 @@
+---
+import '/src/styles/global.css'; // Importe votre style global
+---
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Atelier de réparation d'amplis</title>
+
+    <style>
+      body {
+        margin: 0;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+      }
+
+      p {
+      text-align: justify; 
+      font-family: "Roboto", sans-serif;
+      line-height: 1.5;
+      
+      }
+
+      .container ul {
+      font-family: "Roboto", sans-serif;
+      text-align: justify;      /* puces alignées à gauche */
+      padding-left: 10px;    /* espace pour les puces */
+      list-style-type: disc; /* puces classiques */
+      }
+
+      .container ul li {
+      margin-bottom: 12px;   /* espace vertical entre les puces */
+      line-height: 1.5;
+      }
+
+
+      header {
+        background-image: url('/images/baniere_v1.png');
+        background-size: 35%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 180px;
+      }
+
+      nav {
+        margin: 20px 0;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-family: "Arial", sans-serif;
+        font-variant: small-caps;
+        font-size: 1.5em
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-top: 70px;
+        text-align: center;
+        font-variant: small-caps;
+        font-family: "Arial", sans-serif;
+      }
+
+      h2 {
+        margin-top: 40px;
+        font-size: 1.5em;
+      }
+
+      h3 {
+      font-size: 1.5em;               /* taille du texte */
+      font-weight: 900;                  /* texte en gras */
+      font-family: "Calibri", sans-serif;
+      color: #000A52;
+      text-align: center;                /* centre le texte si multi-ligne */
+      border-radius: 4px;                /* coins légèrement arrondis, optionnel */
+    }
+
+
+      .contact {
+        margin: 40px auto;
+        max-width: 500px;
+        text-align: left;
+        background: #f7f7f7;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      input, textarea {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: inherit;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .photos {
+        margin: 50px auto;
+      }
+
+      .photos img {
+        max-width: 300px;
+        margin: 10px;
+      }
+
+      .container {
+        max-width: 50%;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header></header>
+
+    <nav>
+      <a href="/">Réparation</a> &#9670;
+      <a href="/amplis">Amplis</a> &#9670;
+      <a href="/contact">Contact</a>
+    </nav>
+
+    <main>
+      <div class="container">
+
+        <h1>Contact</h1>
+
+        <p>Vous pouvez me contacter sur l'adresse email suivante : shindo.tech.paris[at]gmail.com</p>
+
+      </div>
+
+    </main>
+  </body>
+</html>
+
