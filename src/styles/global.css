@@ -3,3 +3,9 @@ body {
   background-attachment: fixed; /* (Optionnel) Fixe le fond lorsque vous faites défiler la page */
   background-size: auto; /* (Optionnel) Taille de la texture, "auto" est souvent bon pour les textures */
 }
+
+html {
+  color-scheme: light; /* indique au navigateur de ne pas inverser les couleurs */
+  background: #fff;    /* couleur de fond forcée */
+  color: #000;         /* couleur du texte forcée */
+}

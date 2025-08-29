@@ -4,13 +4,15 @@ import '/src/styles/global.css'; // Importe votre style global
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atelier de réparation d'amplis</title>
 
     <style>
       body {
-        margin: 0;
         text-align: center;
         font-family: "Roboto", sans-serif;
+        margin: 0 auto;   /* centre le contenu */
+        
       }
 
       p {
@@ -120,6 +122,14 @@ import '/src/styles/global.css'; // Importe votre style global
         margin: 0 auto;
         text-align: center;
       }
+
+      @media (max-width: 768px) {
+      .container {
+        width: 95%;         /* un peu plus large sur mobile */
+        max-width: none;    /* supprime la limite */
+        text-align: left;   /* souvent plus lisible à gauche sur mobile */
+      }
+    }
     </style>
   </head>
 
