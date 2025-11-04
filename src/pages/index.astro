@@ -12,7 +12,7 @@ import '/src/styles/global.css'; // Importe votre style global
         text-align: center;
         font-family: "Roboto", sans-serif;
         margin: 0 auto;   /* centre le contenu */
-        
+        padding-bottom: 150px; /* ajoute de l’espace sous le contenu */
       }
 
       p {
@@ -32,6 +32,7 @@ import '/src/styles/global.css'; // Importe votre style global
       .container ul li {
       margin-bottom: 12px;   /* espace vertical entre les puces */
       line-height: 1.5;
+      text-align: justify;
       }
 
 
@@ -68,6 +69,7 @@ import '/src/styles/global.css'; // Importe votre style global
       h2 {
         margin-top: 40px;
         font-size: 1.5em;
+        text-align: center;
       }
 
       h3 {
@@ -75,7 +77,7 @@ import '/src/styles/global.css'; // Importe votre style global
       font-weight: 900;                  /* texte en gras */
       font-family: "Calibri", sans-serif;
       color: #000A52;
-      text-align: center;                /* centre le texte si multi-ligne */
+      text-align: justify;                /* centre le texte si multi-ligne */
       border-radius: 4px;                /* coins légèrement arrondis, optionnel */
     }
 
@@ -118,7 +120,7 @@ import '/src/styles/global.css'; // Importe votre style global
       }
 
       .container {
-        max-width: 50%;
+        max-width: 53%;
         margin: 0 auto;
         text-align: center;
       }
@@ -137,35 +139,52 @@ import '/src/styles/global.css'; // Importe votre style global
     <header></header>
 
     <nav>
-      <a href="/">Réparation</a> &#9670;
-      <a href="/amplis">Amplis</a> 
+      &#9670; <a href="/">Réparation</a> &#9670;
     </nav>
 
     <main>
       <div class="container">
-        <h1>Atelier de Réparation en Seine Saint Denis</h1>
-        <h3><i>Sur rendez-vous uniquement</i></h3>
-
-        <p>Spécialiste des <b>amplis à lampes</b> (guitare et basse) pour les musicien(ne)s et les studios, je prends en charge la <b>maintenance</b> et la <b>réparation</b> de vos équipements. </p>
-        <p>Pour toute autre demande - <b>modification spécifique</b> ou réparation sur d'<b>autre matériel</b> - n'hésitez pas à l'indiquer dans le formulaire ci-dessous : j'étudierai votre projet avec attention.</p>
-
-        <h1>Informations & tarifs</h1>
         
+        <h1>Atelier de réparation de matériel audio à Montreuil (93)</h1>
+
+        <p>Technicien réparateur spécialisé en <strong>électronique audio</strong>, j’interviens sur vos <strong>amplificateurs à lampes</strong> et <strong>pédales d’effets</strong> afin de leur redonner une seconde vie, tout en préservant au maximum leur caractère sonore d’origine. </p>
+        <p>Que ce soit pour une réparation ou pour une opération de maintenance, n'hésitez pas à me contacter en utilisant <a href="#formulaire">le formuaire de contact</a> !</p>
+        <img src="/images/figure1.png" alt="Mon logo" style="width: 1030px; height: auto;"/>
+        <h2>Comment se déroule une intervention ?</h2>
+        <h3>1. Demande de réparation</h3>
+        <p> Pour toute demande de réparation, utilisez le <strong>formulaire de contact</strong> disponible en bas de page. Je vous réponds rapidement pour organiser la suite.</p>
+        <p> Pour toute réparation sur un autre type de matériel ou demande de modification de pédale/ampli, n’hésitez pas à également m'en faire part. J’étudierai votre demande avec attention.</p>
+        <h3>2. Dépôt ou récupération du matériel</h3>
         <ul>
-          <li>Pour prendre rendez-vous, utilisez le <b>formulaire de contact ci-dessous</b> en précisant : le modèle de votre ampli, les problèmes constatés et toutes remarques pertinentes. <b>Je vous répondrai dans les 48h.</b></li>
-          <li><b>Tarif</b> : 40 € de l'heure par réparation + prix des pièces détachées.</li>
-          <li>Garantie : mon travail est couvert pendant <b>90 jours</b>. N'hésitez pas à me contacter si un problème survient après la réparation.</li>
+        <li>Dépôt possible directement dans <strong>mon atelier à Montreuil (93)</strong></li>
+        <li>Récupération à domicile possible sur <strong>Paris et la proche banlieue</strong> (avec frais de déplacement)</li>
         </ul>
+        <h3>3. Devis et validation</h3>
+        <p>Après un premier examen, je vous transmets un <strong>devis détaillé</strong> (étant en phase de lancement, les refus de devis ne sont pas facturés).</p>
+        <h3>4. Réparation et restitution</h3>
+        <p>Après votre accord, la réparation est effectuée dans <strong>un délai deux semaines</strong>, sauf dans le cas où l'opération nécessiterait la commande de composants très spécifiques.</p>
+        <p>Le matériel est ensuite restitué sur rendez-vous.</p>
+        <h3>Suivi pour les amplificateurs à lampes</h3>
+        <p>Chaque ampli réparé est livré accompagné d'une <strong>fiche de suivi</strong> mentionnant notamment l’état des lampes et le détail des interventions effectuées.</p>
 
+        <h2>Tarifs</h2>
+        <p>Les tarifs sont calculés ainsi : <strong>40€/heure de main-d’œuvre</strong> + <strong>coût des pièces détachées</strong> </p>
+        <p>En moyenne, une réparation de pédale coûte 20 à 40€, une réparation d’ampli 80 à 120€.</p>
+        
+        <section id="formulaire">
+        <h2>Formulaire de contact </h2>
+        <p>(Il n'est pas nécessaire d'utiliser un compte google pour remplir le formulaire)</p>
       </div>
-
-      <div class="photos">
-        <img src="/images/champ_flower_test.jpeg" alt="Flower Champ" />
-      </div>
-
+    
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScACAr3kklZvhjutSgEUuuYJW8jjivxqTxZjHj8Zy66nMroPQ/viewform?embedded=true" width="640" height="896" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
         
       </script>
+      </section>
+       
+        <p>
+        <h1>! Site en cours de construction !</h1>
+        </p>
+
     </main>
   </body>
 </html>

@@ -1,0 +1,171 @@
+---
+import '/src/styles/global.css'; // Importe votre style global
+---
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier de réparation d'amplis</title>
+
+    <style>
+      body {
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        margin: 0 auto;   /* centre le contenu */
+        
+      }
+
+      p {
+      text-align: justify; 
+      font-family: "Roboto", sans-serif;
+      line-height: 1.5;
+      
+      }
+
+      .container ul {
+      font-family: "Roboto", sans-serif;
+      text-align: justify;      /* puces alignées à gauche */
+      padding-left: 10px;    /* espace pour les puces */
+      list-style-type: disc; /* puces classiques */
+      }
+
+      .container ul li {
+      margin-bottom: 12px;   /* espace vertical entre les puces */
+      line-height: 1.5;
+      }
+
+
+      header {
+        background-image: url('/images/baniere_v1.png');
+        background-size: 35%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 180px;
+      }
+
+      nav {
+        margin: 20px 0;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-family: "Arial", sans-serif;
+        font-variant: small-caps;
+        font-size: 1.5em
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-top: 70px;
+        text-align: center;
+        font-variant: small-caps;
+        font-family: "Arial", sans-serif;
+      }
+
+      h2 {
+        margin-top: 40px;
+        font-size: 1.5em;
+      }
+
+      h3 {
+      font-size: 1.5em;               /* taille du texte */
+      font-weight: 900;                  /* texte en gras */
+      font-family: "Calibri", sans-serif;
+      color: #000A52;
+      text-align: center;                /* centre le texte si multi-ligne */
+      border-radius: 4px;                /* coins légèrement arrondis, optionnel */
+    }
+
+
+      .contact {
+        margin: 40px auto;
+        max-width: 500px;
+        text-align: left;
+        background: #f7f7f7;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      input, textarea {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: inherit;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .photos {
+        margin: 50px auto;
+      }
+
+      .photos img {
+        max-width: 300px;
+        margin: 10px;
+      }
+
+      .container {
+        max-width: 50%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+      .container {
+        width: 95%;         /* un peu plus large sur mobile */
+        max-width: none;    /* supprime la limite */
+        text-align: left;   /* souvent plus lisible à gauche sur mobile */
+      }
+    }
+    </style>
+  </head>
+
+  <body>
+    <header></header>
+
+    <nav>
+      <a href="/">Réparation</a> &#9670;
+      <a href="/amplis">Amplis</a> 
+    </nav>
+
+    <main>
+      <div class="container">
+        <h1>Atelier de Réparation en Seine Saint Denis</h1>
+        <h3><i>Sur rendez-vous uniquement</i></h3>
+
+        <p>Spécialiste des <b>amplis à lampes</b> (guitare et basse) pour les musicien(ne)s et les studios, je prends en charge la <b>maintenance</b> et la <b>réparation</b> de vos équipements. </p>
+        <p>Pour toute autre demande - <b>modification spécifique</b> ou réparation sur d'<b>autre matériel</b> - n'hésitez pas à l'indiquer dans le formulaire ci-dessous : j'étudierai votre projet avec attention.</p>
+
+        <h1>Informations & tarifs</h1>
+        
+        <ul>
+          <li>Pour prendre rendez-vous, utilisez le <b>formulaire de contact ci-dessous</b> en précisant : le modèle de votre ampli, les problèmes constatés et toutes remarques pertinentes. <b>Je vous répondrai dans les 48h.</b></li>
+          <li><b>Tarif</b> : 40 € de l'heure par réparation + prix des pièces détachées.</li>
+          <li>Garantie : mon travail est couvert pendant <b>90 jours</b>. N'hésitez pas à me contacter si un problème survient après la réparation.</li>
+        </ul>
+
+      </div>
+
+      <div class="photos">
+        <img src="/images/champ_flower_test.jpeg" alt="Flower Champ" />
+      </div>
+
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScACAr3kklZvhjutSgEUuuYJW8jjivxqTxZjHj8Zy66nMroPQ/viewform?embedded=true" width="640" height="896" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+        
+      </script>
+    </main>
+  </body>
+</html>
