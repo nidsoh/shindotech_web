@@ -1,10 +1,37 @@
 ---
 import '/src/styles/global.css'; // Importe votre style global
+const meta = {
+  title: "ShindoTech - Réparation amplificateurs à lampes & pédales d'effets à Paris",
+  description: "Technicien spécialisé en électronique audio, j'interviens à Paris et proche banlieue pour réparer et entretenir vos amplificateurs à lampes, pédales d'effets et matériel audio. Redonnez vie à votre équipement tout en préservant son caractère sonore d'origine.",
+  url: "https://shindotech.fr",
+  };
 ---
+
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- SEO principal -->
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.description} />
+    
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:url" content={meta.url} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
+
+    <!-- Sitemap et robots (SEO technique) -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap-index.xml" />
+    <meta name="robots" content="index, follow" />
     <title>Atelier de réparation d'amplis</title>
 
     <style>
