@@ -1,0 +1,903 @@
+---
+import '/src/styles/global.css'; // Importe votre style global
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO -->
+  <title>ShindoTech - Réparation électronique audio | Musiciens & Studios | France entière</title>
+  <meta name="description" content="Atelier de réparation électronique audio à Montreuil. Amplis, synthétiseurs, pédales, tables de mixage, préamplis, compresseurs, matériel studio. Service par correspondance France entière. Dépôt main propre Île-de-France. Spécialiste musiciens et studios d'enregistrement.">
+  <meta name="keywords" content="réparation matériel audio France, réparation studio enregistrement, technicien audio correspondance, réparation synthétiseur France, réparation ampli France, réparation préampli, réparation compresseur, réparation table mixage, électronique audio musicien, réparation matériel production musicale, atelier audio Montreuil Paris, réparation outboard studio, maintenance matériel audio professionnel">
+  <meta name="geo.region" content="FR">
+  <meta name="geo.placename" content="France, Île-de-France">
+  <link rel="canonical" content="https://shindotech.fr">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ShindoTech - Réparation électronique audio musiciens & studios">
+  <meta property="og:description" content="Réparation matériel audio professionnel. Service France entière par correspondance. Dépôt main propre Île-de-France.">
+  <meta property="og:url" content="https://shindotech.fr">
+  <meta property="og:locale" content="fr_FR">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ShindoTech - Réparation matériel audio France">
+  
+  <!-- SEO Local -->
+  <meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ShindoTech",
+    "description": "Atelier de réparation électronique audio pour musiciens et studios d'enregistrement. Service par correspondance France entière et dépôt main propre en Île-de-France",
+    "url": "https://shindotech.fr",
+    "telephone": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "Montreuil",
+      "postalCode": "93100",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "48.8614",
+      "longitude": "2.4436"
+    },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "France"
+      },
+      {
+        "@type": "State",
+        "name": "Île-de-France"
+      }
+    ],
+    "priceRange": "€€",
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "serviceType": ["Réparation amplificateurs", "Réparation synthétiseurs", "Réparation pédales d'effets", "Réparation matériel studio", "Réparation préamplis", "Réparation compresseurs", "Réparation tables de mixage", "Réparation outboard", "Maintenance électronique audio professionnelle"]
+  }
+  </script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-color: #1a4d6d;
+      --secondary-color: #2c6b8f;
+      --accent-color: #4a90b5;
+      --text-dark: #2c3e50;
+      --text-light: #555;
+      --bg-light: #e8f1f5;
+      --bg-texture: #a4c3d2;
+      --border-radius: 12px;
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      color: var(--text-dark);
+    }
+
+    /* Bannière principale */
+    .header-banner {
+      background-image: url('/images/baniere_v1.png');
+        background-size: 35%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 180px;
+    }
+
+    /* Ajustement mobile */
+    @media (max-width: 768px) {
+      .header-banner {
+        height: 200px;
+      }
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-placeholder {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+      overflow: hidden;
+    }
+    
+    .logo-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .brand {
+      color: white;
+    }
+
+    .brand h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .brand p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-top: 0.2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      transition: var(--transition);
+      font-weight: 500;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section avec texture */
+    .hero {
+     background-size: cover, 150px 150px;
+      padding: 4rem 20px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero h2 {
+      font-size: 2em;
+      font-variant: small-caps;
+      color: black;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+      font-family: "Calibri", sans-serif;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: var(--accent-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(74, 144, 181, 0.3);
+    }
+
+    .cta-button:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(74, 144, 181, 0.4);
+    }
+
+    /* Services Cards */
+    .services {
+      padding: 4rem 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 3rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--accent-color);
+      border-radius: 2px;
+    }
+    
+    /* Photos atelier */
+    .workshop-photos {
+      margin: 3rem 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+    }
+    
+    .workshop-photos img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .workshop-photos img:hover {
+      transform: scale(1.05);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: var(--transition);
+      border: 2px solid transparent;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      border-color: var(--accent-color);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .service-card p {
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* Process Section */
+    .process {
+       background-image:
+        url('/public/images/textures/6.png');
+      background-repeat: repeat;
+      background-size: auto;
+      padding: 4rem 20px;
+    }
+
+    .process-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+     .process h2 {
+      font-size: 2em;
+      font-variant: small-caps;
+      color: black;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+      font-family: "Calibri", sans-serif;
+    }
+
+    .process-step {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      margin-bottom: 2rem;
+      border-left: 5px solid var(--accent-color);
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
+    }
+
+    .process-step:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-weight: bold;
+      margin-right: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .process-step h3 {
+      color: var(--primary-color);
+      display: inline-block;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .process-step p, .process-step ul {
+      margin-top: 1rem;
+      color: var(--text-light);
+    }
+
+    .process-step ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .process-step li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .process-step li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+    
+    /* Options de dépôt */
+    .deposit-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .option-card {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+      border: 3px solid var(--bg-light);
+      transition: var(--transition);
+      text-align: center;
+    }
+    
+    .option-card:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+    }
+    
+    .option-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .option-card h4 {
+      color: var(--primary-color);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .option-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
+      background: var(--accent-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+    
+    .option-link:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+
+
+
+    /* Contact Form */
+    .contact-section {
+      padding: 4rem 20px;
+    }
+
+    
+
+    .contact-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .form-intro {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--text-light);
+    }
+
+    form {
+      background: white;
+      padding: 2.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.9rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(74, 144, 181, 0.1);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 1.2rem;
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    button[type="submit"]:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(74, 144, 181, 0.3);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    footer p {
+      opacity: 0.9;
+    }
+    
+    /* Page réparation par correspondance */
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      background: var(--bg-light);
+      color: var(--primary-color);
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: var(--transition);
+      margin-bottom: 2rem;
+    }
+    
+    .back-button:hover {
+      background: var(--accent-color);
+      color: white;
+    }
+    .contact-section h2 {
+          font-size: 2em;
+          font-variant: small-caps;
+          color: black;
+          margin-bottom: 1.5rem;
+          line-height: 1.3;
+          font-family: "Calibri", sans-serif;
+        }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .brand h1 {
+        font-size: 1.3rem;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .process-step h3 {
+        display: block;
+        margin-top: 1rem;
+      }
+
+      .pricing-detail {
+        font-size: 2rem;
+      }
+
+      form {
+        padding: 1.5rem;
+      }
+      
+      .workshop-photos {
+        grid-template-columns: 1fr;
+      }
+      
+      .workshop-photos img {
+        height: 200px;
+      }
+      
+      .deposit-options {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Navigation entre pages */
+    .page {
+      display: none;
+      min-height: 100vh;
+    }
+    
+    .page.active {
+      display: block;
+    }
+
+    /* Animation on scroll */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service-card, .process-step {
+      animation: fadeInUp 0.6s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page principale -->
+  <div id="main-page" class="page active">
+  <!-- Header -->
+  <header class="header-banner"></header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Atelier de réparation de matériel audio pour musicien.nes et studios</h2>
+      <p>Réparateur spécialisé en <strong>électronique audio</strong>, j'interviens sur tout types d'équipements (amplis, pédales, synthés, boîtes à rythmes...) pour leur redonner vie. 
+        N'hésitez pas à me contacter, que ce soit pour une <strong>réparation</strong>, pour une opération de <strong>maintenance</strong> ou pour une demande de <strong>modification</strong>.</p>
+        
+      <p style="font-size: 1.05rem; margin-top: 1rem; font-weight: 600; color: rgb(34, 34, 151);">📦 Service par correspondance en France métropolitaine • 🏪 Dépôt main propre sur Montreuil (93)</p>
+      <br>
+      <a href="#contact" class="cta-button">DEMANDER UN DEVIS</a>
+      
+      <!-- Photos de l'atelier -->
+      <div class="workshop-photos">
+        <img src="/images/figure1a.jpeg" alt="Montage Champ TT" loading="lazy">
+        <img src="/images/figure1b.jpeg" alt="Rep EdenWTDI" loading="lazy">
+        <img src="/images/figure1c.jpeg" alt="Rep Minibrute" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process">
+    <div class="process-container">
+      <h2 class="section-title">Déroulement de la prise en charge</h2>
+      
+      <div class="process-step">
+        <span class="step-number">1</span>
+        <h3>Demande de réparation</h3>
+        <p>Utilisez le formulaire de contact ci-dessous pour décrire votre problème, je vous répondrai au plus vite.</p>
+      </div>
+
+      <div class="process-step">
+        <span class="step-number">2</span>
+        <h3>Remise du matériel</h3>
+        <p>Deux options selon votre localisation :</p>
+        
+        <div class="deposit-options">
+          <div class="option-card">
+            <div class="option-icon">🏪</div>
+            <h4>Dépôt main propre</h4>
+            <p><strong>Île-de-France :</strong> Déposez directement votre matériel sur RDV à Montreuil, je peux également me déplacer en IDF pour récupérer le matériel (frais de déplacement appliqués).</p>
+          </div>
+          
+          <div class="option-card">
+            <div class="option-icon">📦</div>
+            <h4>Envoi par transporteur</h4>
+            <p><strong>France métropolitaine :</strong> Envoyez votre matériel par le transporteur de votre choix (Mondial Relay, Chronopost, Colissimo, etc.).</p>
+            <a href="#shipping-page" class="option-link" onclick="showShippingPage(event)">En savoir plus →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="step-number">3</span>
+        <h3>Diagnostic et devis</h3>
+        <p>Après examen approfondi, vous recevez un devis détaillé (étant en phase de lancement d'activité, les devis sont gratuits).</p>
+        <p>Le tarif est calculée sur une base de 40€/heure de réparation. Coûts moyens : 40-60€ pour une pédale, 80-120€ pour un ampli. </p>
+      </div>
+
+      <div class="process-step">
+        <span class="step-number">4</span>
+        <h3>Réparation et restitution</h3>
+        <p>Après votre accord, intervention dans un délai de deux semaines (sauf pour les réparations nécessitant la commande de composants spécifiques). </p>
+        <p>Paiement en espèce ou CB lors de la restitution sur rendez-vous (pour les réparaions par correspondance le paiement sera effectué après établissement du devis).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <h2 class="section-title">Demander un devis</h2>
+      
+      <form action="https://formsubmit.co/your-email@example.com" method="POST">
+        <!-- Configuration FormSubmit -->
+        <input type="hidden" name="_subject" value="Nouvelle demande ShindoTech">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        
+        <div class="form-group">
+          <label for="name">Nom *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+          <label for="service-type">Type de remise du matériel *</label>
+          <select id="service-type" name="service-type" required>
+            <option value="">Sélectionnez...</option>
+            <option value="Remise en main propre">Remise en main propre (Île-de-France)</option>
+            <option value="Par correspondance">Par correspondance (France entière)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="equipment">Type de matériel *</label>
+          <select id="equipment" name="equipment" required>
+            <option value="">Sélectionnez...</option>
+            <option value="Amplificateur">Amplificateur</option>
+            <option value="Pédale d'effet">Pédale d'effet</option>
+            <option value="Synthétiseur">Synthétiseur / Clavier</option>
+            <option value="Table de mixage">Table de mixage</option>
+            <option value="Préampli / Compresseur">Préampli / Compresseur / Outboard</option>
+            <option value="Interface audio">Interface audio / Convertisseur</option>
+            <option value="Autre matériel audio">Autre matériel audio</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="modele">Modèle *</label>
+          <input type="text" id="modele" name="modele" placeholder="Exemple : Electro Harmonix Big Muff USA " required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Description du problème *</label>
+          <textarea id="message" name="message" required placeholder="Décrivez le problème rencontré ou toute autre demande (modification, maintenance...). Soyez le plus précis possible svp 🙏 "></textarea>
+        </div>
+
+        <button type="submit">Envoyer la demande</button>
+      </form>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 ShindoTech - Atelier de réparation électronique audio à Montreuil (93)</p>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Dépôt main propre Île-de-France • Service par correspondance France entière</p>
+  </footer>
+  </div>
+  
+  <!-- Page réparation par correspondance -->
+  <div id="shipping-page" class="page">
+    <header class="header-banner">
+      <nav>
+          <a href="#main-page" onclick="showMainPage(event)">Retour à l'accueil</a>
+        </nav>
+    </header>
+    
+    <!-- Hero Section Page 2 -->
+    <section class="hero">
+      <div class="hero-content">
+        <a href="#main-page" class="back-button" onclick="showMainPage(event)">
+          <span>←</span> Retour à l'accueil
+        </a>
+        <h2 style="margin-top: 2rem;">Service de réparation par correspondance</h2>
+        <p>Faites réparer votre matériel audio où que vous soyez en France</p>
+      </div>
+    </section>
+    
+    <!-- Intro -->
+    <section class="services">
+      <div class="service-card" style="max-width: 900px; margin: 0 auto; text-align: left;">
+        <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 1.5rem;">Comment ça fonctionne ?</h3>
+        <p>Pour les réparations par correspondance, merci de me contacter au préalable via le formulaire. Après étude de votre demande, une estimation tarifaire vous sera communiquée, ainsi que mes coordonnées postales.</p>
+        <p>L'envoi du matériel vers l'atelier est effectué par vos soins et à votre charge, avec le transporteur de votre choix (Mondial Relay, Chronopost, Shop2Shop, Colissimo, etc.). Voir nos recommandations pour l'expédition.</p>
+        <p>À réception du matériel, un devis de réparation détaillé vous est transmis. Les travaux débutent uniquement après validation du devis et réception du paiement (carte bancaire).</p>
+        <p>Une fois la réparation terminée, votre matériel vous est retourné par le transporteur de votre choix, avec communication du numéro de suivi. Mon travail est ensuite garanti pour les 3 mois suivant la réception de votre matériel.</p>
+      </div>
+    </section>
+    
+    <!-- Processus -->
+    <section class="process">
+      <div class="process-container">
+        <h2 class="section-title">Déroulement de la réparation</h2>
+        
+        <div class="process-step">
+          <span class="step-number">1</span>
+          <h3>Contact préalable</h3>
+          <p>Utilisez le formulaire de contact pour décrire votre problème. Je vous réponds avec une estimation tarifaire et mes coordonnées postales.</p>
+        </div>
+        
+        <div class="process-step">
+          <span class="step-number">2</span>
+          <h3>Expédition du matériel</h3>
+          <p>Vous envoyez votre matériel soigneusement emballé avec le transporteur de votre choix. Frais d'envoi à votre charge.</p>
+        </div>
+        
+        <div class="process-step">
+          <span class="step-number">3</span>
+          <h3>Diagnostic et devis détaillé</h3>
+          <p>À réception, j'examine votre matériel et vous transmets un devis précis avec le détail des interventions nécessaires.</p>
+        </div>
+        
+        <div class="process-step">
+          <span class="step-number">4</span>
+          <h3>Validation et paiement</h3>
+          <p>Après validation du devis et réception du paiement par carte bancaire, je débute les travaux de réparation.</p>
+        </div>
+        
+        <div class="process-step">
+          <span class="step-number">5</span>
+          <h3>Retour du matériel</h3>
+          <p>Matériel retourné par le transporteur de votre choix avec numéro de suivi. Garantie 3 mois sur mon intervention.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Recommandations -->
+    <section class="services" style="background: var(--bg-light); padding: 4rem 20px;">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 class="section-title">Recommandations d'envoi</h2>
+        
+        <div class="service-card" style="text-align: left;">
+          <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">📦 Emballage sécurisé</h3>
+          <p>Afin d'assurer un transport sécurisé de votre matériel, nous vous recommandons de porter une attention particulière à l'emballage lors de l'expédition vers l'atelier.</p>
+          
+          <p style="margin-top: 1.5rem;"><strong>Le matériel doit être :</strong></p>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+              <span style="position: absolute; left: 0;">✓</span>
+              soigneusement emballé dans un carton robuste,
+            </li>
+            <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+              <span style="position: absolute; left: 0;">✓</span>
+              protégé sur toutes les faces à l'aide de matériaux amortissants (papier bulle, mousse, calage…). Notamment au niveau des éléments sensibles (potentiomètres, écrans, …)
+            </li>
+            <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+              <span style="position: absolute; left: 0;">✓</span>
+              bien immobilisé dans le carton afin de limiter tout mouvement pendant le transport
+            </li>
+            <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+              <span style="position: absolute; left: 0;">✓</span>
+              Tous les câbles débranchables doivent être débranchés !
+            </li>
+          </ul>
+          
+          <p style="font-style: italic; margin-top: 1.5rem; color: var(--text-light);">L'emballage et l'assurance du matériel relèvent de la responsabilité de l'expéditeur pour l'envoi vers l'atelier.</p>
+        </div>
+        
+        <div class="service-card" style="margin-top: 2rem; text-align: left; border-left: 4px solid var(--accent-color);">
+          <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">🛡️ Assurance transport</h3>
+          <p>La plupart des transporteurs proposent des options d'assurance ou de valeur déclarée, permettant une meilleure couverture en cas de perte ou de dommage pendant l'acheminement.</p>
+          <p style="margin-top: 1rem;">En l'absence d'assurance spécifique, l'indemnisation éventuelle en cas de sinistre est limitée aux conditions standard du transporteur.</p>
+          <p style="font-weight: 600; color: var(--primary-color); margin-top: 1rem;">Pour les retours depuis l'atelier, vous aurez systématiquement la possibilité de choisir de souscrire ou non à l'assurance transport étendue.</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="#main-page" class="cta-button" onclick="showMainPage(event); window.location.hash='contact';">Demander un devis</a>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <p>&copy; 2026 ShindoTech - Atelier de réparation électronique audio à Montreuil (93)</p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem;">Dépôt main propre Île-de-France • Service par correspondance France entière</p>
+    </footer>
+  </div>
+  
+  <script>
+    function showShippingPage(event) {
+      event.preventDefault();
+      document.getElementById('main-page').classList.remove('active');
+      document.getElementById('shipping-page').classList.add('active');
+      window.scrollTo(0, 0);
+    }
+    
+    function showMainPage(event) {
+      event.preventDefault();
+      document.getElementById('shipping-page').classList.remove('active');
+      document.getElementById('main-page').classList.add('active');
+      window.scrollTo(0, 0);
+    }
+  </script>
+</body>
+</html>

@@ -1,217 +1,143 @@
 ---
-import '/src/styles/global.css'; // Importe votre style global
-const meta = {
-  title: "ShindoTech - Réparation amplificateurs à lampes & pédales d'effets à Paris",
-  description: "Technicien spécialisé en électronique audio, j'interviens à Paris et proche banlieue pour réparer et entretenir vos amplificateurs à lampes, pédales d'effets et matériel audio. Redonnez vie à votre équipement tout en préservant son caractère sonore d'origine.",
-  url: "https://shindotech.fr",
-  };
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <!-- SEO principal -->
-    <title>{meta.title}</title>
-    <meta name="description" content={meta.description} />
-    
-    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={meta.title} />
-    <meta property="og:description" content={meta.description} />
-    <meta property="og:url" content={meta.url} />
+<BaseLayout 
+  title="ShindoTech - Réparation électronique audio | Musiciens & Studios | France entière"
+  description="Atelier de réparation électronique audio à Montreuil. Amplis, synthétiseurs, pédales, tables de mixage, préamplis, compresseurs, matériel studio. Service par correspondance France entière. Dépôt main propre Île-de-France. Spécialiste musiciens et studios d'enregistrement."
+  keywords="réparation matériel audio France, réparation studio enregistrement, technicien audio correspondance, réparation synthétiseur France, réparation ampli France, réparation préampli, réparation compresseur, réparation table mixage, électronique audio musicien, réparation matériel production musicale, atelier audio Montreuil Paris, réparation outboard studio, maintenance matériel audio professionnel"
+>
+  <!-- Header -->
+  <header class="header-banner"></header>
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={meta.title} />
-    <meta name="twitter:description" content={meta.description} />
-
-    <!-- Sitemap et robots (SEO technique) -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap-index.xml" />
-    <meta name="robots" content="index, follow" />
-    <title>Atelier de réparation d'amplis</title>
-
-    <style>
-      body {
-        text-align: center;
-        font-family: "Roboto", sans-serif;
-        margin: 0 auto;   /* centre le contenu */
-        padding-bottom: 150px; /* ajoute de l’espace sous le contenu */
-      }
-
-      p {
-      text-align: justify; 
-      font-family: "Roboto", sans-serif;
-      line-height: 1.5;
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Atelier de réparation de matériel audio pour musicien.nes et studios</h2>
+      <p>Réparateur spécialisé en <strong>électronique audio</strong>, j'interviens sur tout types d'équipements (amplis, pédales, synthés, boîtes à rythmes...) pour leur redonner vie. 
+        N'hésitez pas à me contacter, que ce soit pour une <strong>réparation</strong>, pour une opération de <strong>maintenance</strong> ou pour une demande de <strong>modification</strong>.</p>
+        
+      <p style="font-size: 1.05rem; margin-top: 1rem; font-weight: 600; color: rgb(34, 34, 151);">📦 Service par correspondance en France métropolitaine • 🪛 Dépôt main propre sur Montreuil (93)</p>
+      <br>
+      <a href="#contact" class="cta-button">DEMANDER UN DEVIS</a>
       
-      }
-
-      .container ul {
-      font-family: "Roboto", sans-serif;
-      text-align: justify;      /* puces alignées à gauche */
-      padding-left: 10px;    /* espace pour les puces */
-      list-style-type: disc; /* puces classiques */
-      }
-
-      .container ul li {
-      margin-bottom: 12px;   /* espace vertical entre les puces */
-      line-height: 1.5;
-      text-align: justify;
-      }
-
-
-      header {
-        background-image: url('/images/baniere_v1.png');
-        background-size: 35%;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 180px;
-      }
-
-      nav {
-        margin: 20px 0;
-      }
-
-      nav a {
-        margin: 0 15px;
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        font-family: "Arial", sans-serif;
-        font-variant: small-caps;
-        font-size: 1.5em
-      }
-
-      h1 {
-        font-size: 2em;
-        margin-top: 70px;
-        text-align: center;
-        font-variant: small-caps;
-        font-family: "Arial", sans-serif;
-      }
-
-      h2 {
-        margin-top: 40px;
-        font-size: 1.5em;
-        text-align: center;
-      }
-
-      h3 {
-      font-size: 1.5em;               /* taille du texte */
-      font-weight: 900;                  /* texte en gras */
-      font-family: "Calibri", sans-serif;
-      color: #000A52;
-      text-align: justify;                /* centre le texte si multi-ligne */
-      border-radius: 4px;                /* coins légèrement arrondis, optionnel */
-    }
-
-
-      .contact {
-        margin: 40px auto;
-        max-width: 500px;
-        text-align: left;
-        background: #f7f7f7;
-        padding: 20px;
-        border-radius: 8px;
-      }
-
-      input, textarea {
-        width: 100%;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-family: inherit;
-      }
-
-      button {
-        padding: 10px 20px;
-        background-color: black;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-
-      .photos {
-        margin: 50px auto;
-      }
-
-      .photos img {
-        max-width: 300px;
-        margin: 10px;
-      }
-
-      .container {
-        max-width: 53%;
-        margin: 0 auto;
-        text-align: center;
-      }
-
-      @media (max-width: 768px) {
-      .container {
-        width: 95%;         /* un peu plus large sur mobile */
-        max-width: none;    /* supprime la limite */
-        text-align: left;   /* souvent plus lisible à gauche sur mobile */
-      }
-    }
-    </style>
-  </head>
-
-  <body>
-    <header></header>
-
-    <nav>
-      &#9670; <a href="/">Réparation</a> &#9670;
-    </nav>
-
-    <main>
-      <div class="container">
-        
-        <h1>Atelier de réparation de matériel audio à Montreuil (93)</h1>
-
-        <p>Technicien réparateur spécialisé en <strong>électronique audio</strong>, j’interviens sur vos <strong>amplificateurs à lampes</strong> et <strong>pédales d’effets</strong> afin de leur redonner une seconde vie, tout en préservant au maximum leur caractère sonore d’origine. </p>
-        <p>Que ce soit pour une réparation ou pour une opération de maintenance, n'hésitez pas à me contacter en utilisant <a href="#formulaire">le formulaire de contact</a> !</p>
-        <img src="/images/figure1.png" alt="Mon logo" style="width: 1030px; height: auto;"/>
-        <h2>Comment se déroule une intervention ?</h2>
-        <h3>1. Demande de réparation</h3>
-        <p> Pour toute demande de réparation, utilisez le <strong>formulaire de contact</strong> disponible en bas de page. Je vous réponds rapidement pour organiser la suite.</p>
-        <p> Pour toute réparation sur un autre type de matériel ou demande de modification de pédale/ampli, n’hésitez pas à également m'en faire part. J’étudierai votre demande avec attention.</p>
-        <h3>2. Dépôt ou récupération du matériel</h3>
-        <ul>
-        <li>Dépôt possible directement dans <strong>mon atelier à Montreuil (93)</strong></li>
-        <li>Récupération à domicile possible sur <strong>Paris et la proche banlieue</strong> (avec frais de déplacement)</li>
-        </ul>
-        <h3>3. Devis et validation</h3>
-        <p>Après un premier examen, je vous transmets un <strong>devis détaillé</strong> (étant en phase de lancement, les refus de devis ne sont pas facturés).</p>
-        <h3>4. Réparation et restitution</h3>
-        <p>Après votre accord, la réparation est effectuée dans <strong>un délai deux semaines</strong>, sauf dans le cas où l'opération nécessiterait la commande de composants très spécifiques.</p>
-        <p>Le matériel est ensuite restitué sur rendez-vous.</p>
-        <h3>Suivi pour les amplificateurs à lampes</h3>
-        <p>Chaque ampli réparé est livré accompagné d'une <strong>fiche de suivi</strong> mentionnant notamment l’état des lampes et le détail des interventions effectuées.</p>
-
-        <h2>Tarifs</h2>
-        <p>Les tarifs sont calculés ainsi : <strong>40€/heure de main-d’œuvre</strong> + <strong>coût des pièces détachées</strong> </p>
-        <p>En moyenne, une réparation de pédale coûte 20 à 40€, une réparation d’ampli 80 à 120€.</p>
-        
-        <section id="formulaire">
-        <h2>Formulaire de contact </h2>
-        <p>(Il n'est pas nécessaire d'utiliser un compte google pour remplir le formulaire)</p>
+      <!-- Photos de l'atelier -->
+      <div class="workshop-photos">
+        <img src="/images/figure1a.jpeg" alt="Montage Champ TT" loading="lazy">
+        <img src="/images/figure1b.jpeg" alt="Rep EdenWTDI" loading="lazy">
+        <img src="/images/figure1c.jpeg" alt="Rep Minibrute" loading="lazy">
       </div>
-    
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScACAr3kklZvhjutSgEUuuYJW8jjivxqTxZjHj8Zy66nMroPQ/viewform?embedded=true" width="640" height="896" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
-        
-      </script>
-      </section>
-       
-        <p>
-        <h1>! Site en cours de construction !</h1>
-        </p>
+    </div>
+  </section>
 
-    </main>
-  </body>
-</html>
+  <!-- Process -->
+  <section class="process">
+    <div class="process-container">
+      <h2 class="section-title">Déroulement de la prise en charge</h2>
+      
+      <div class="process-step">
+        <span class="step-number">1</span>
+        <h3>Demande de réparation</h3>
+        <p>Utilisez le formulaire de contact ci-dessous pour décrire votre problème, je vous répondrai au plus vite.</p>
+      </div>
+
+      <div class="process-step">
+        <span class="step-number">2</span>
+        <h3>Remise du matériel</h3>
+        <div class="deposit-options">
+          <div class="option-card">
+            <div class="option-icon">🪛</div>
+            <h4>Dépôt main propre</h4>
+            <p><strong>Île-de-France :</strong> Déposez directement votre matériel sur RDV à Montreuil, je peux également me déplacer en IDF pour récupérer le matériel (frais de déplacement appliqués).</p>
+          </div>
+          
+          <div class="option-card">
+            <div class="option-icon">📦</div>
+            <h4>Envoi par transporteur</h4>
+            <p><strong>France métropolitaine :</strong> Envoyez votre matériel par le transporteur de votre choix (Mondial Relay, Chronopost, Colissimo, etc.).</p>
+            <a href="/shipping" class="option-link">En savoir plus →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="step-number">3</span>
+        <h3>Diagnostic et devis</h3>
+        <p>Après examen approfondi, vous recevez un <strong>devis détaillé</strong> (étant en phase de lancement d'activité, les <strong>devis sont gratuits</strong>).</p>
+        <p>Le tarif est calculé sur une base de <strong>40€/heure</strong> de réparation. Coûts moyens : <strong>40-60€ pour une pédale</strong>, <strong>80-120€ pour un ampli</strong>. </p>
+      </div>
+
+      <div class="process-step">
+        <span class="step-number">4</span>
+        <h3>Réparation et restitution</h3>
+        <p>Après votre accord, intervention dans un délai de <strong>deux semaines</strong> (sauf pour les réparations nécessitant la commande de composants spécifiques). </p>
+        <p>Paiement en <strong>espèce ou CB</strong> lors de la restitution sur rendez-vous (pour les réparations par correspondance le paiement sera effectué après établissement du devis).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <h2 class="section-title">Demander un devis</h2>
+      
+      <form action="shindo.tech.paris@gmail.com" method="POST">
+        <!-- Configuration FormSubmit -->
+        <input type="hidden" name="_subject" value="Nouvelle demande ShindoTech">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        
+        <div class="form-group">
+          <label for="name">Nom *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+          <label for="service-type">Type de remise du matériel *</label>
+          <select id="service-type" name="service-type" required>
+            <option value="">Sélectionnez...</option>
+            <option value="Remise en main propre">Remise en main propre (Île-de-France)</option>
+            <option value="Par correspondance">Par correspondance (France entière)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="equipment">Type de matériel *</label>
+          <select id="equipment" name="equipment" required>
+            <option value="">Sélectionnez...</option>
+            <option value="Amplificateur">Amplificateur</option>
+            <option value="Pédale d'effet">Pédale d'effet</option>
+            <option value="Synthétiseur">Synthétiseur / Clavier</option>
+            <option value="Table de mixage">Table de mixage</option>
+            <option value="Préampli / Compresseur">Préampli / Compresseur / Outboard</option>
+            <option value="Interface audio">Interface audio / Convertisseur</option>
+            <option value="Autre matériel audio">Autre matériel audio</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="modele">Modèle *</label>
+          <input type="text" id="modele" name="modele" placeholder="Exemple : Electro Harmonix Big Muff USA " required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Description du problème *</label>
+          <textarea id="message" name="message" required placeholder="Décrivez le problème rencontré ou toute autre demande (modification, maintenance...). Soyez le plus précis possible svp 🙏 "></textarea>
+        </div>
+
+        <button type="submit">Envoyer la demande</button>
+      </form>
+      
+    </div>
+  </section>
+</BaseLayout>
