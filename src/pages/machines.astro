@@ -1,0 +1,227 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const machines = [
+  {
+    nom: "Peavey Classic 30",
+    photo: "/images/machines/PEAVEY Classic 30.jpg",
+    operation: "Premier ampli passé par le (proto) atelier! Il avait un buzz horrible, resolu en recapant l'alimentation et surtout en refaisant une bonne moitié des soudures...",
+    categorie: "Amplis"
+  },
+  {
+    nom: "Omnitronic TRM-202 mk3",
+    photo: "/images/machines/OMNITRONIC TRM-202.jpg",
+    operation: "Ressoudure de la prise de masse et nettoyant complet des potards.",
+    categorie: "Table de mixage"
+  },
+  {
+    nom: "Roland SP-606",
+    photo: "/images/machines/ROLAND SP-606.jpg",
+    operation: "Changement des condensateurs d'alimentation et de sorties.",
+    categorie: "Sampleur"
+  },
+  {
+    nom: "EDEN WTDI",
+    photo: "/images/machines/EDEN WTDI.jpg",
+    operation: "Remplacement d'un double AOP mort dans le chemin du signal",
+    categorie: "Pédale"
+  },
+  {
+    nom: "KORG Electribe R-mk II",
+    photo: "/images/machines/KORG Electribe R-mk II.jpg",
+    operation: "Cette machine a été tabassée par son précédent proprio, plusieurs potards à changer et chassis à remettre droit",
+    categorie: "BAR"
+  },
+  {
+    nom: "Mackie M1402-VLZ3",
+    photo: "/images/machines/MACKIE M1402-vlz3.jpg",
+    operation: "Matériel récupéré au bord de la mort. La totalité des amplis AOP de la partie master étaient en court circuits. Une bombe contact entière a été nécessaire afin de minimiser les craquements des potards et faders",
+    categorie: "Table de mixage"
+  },
+  {
+    nom: "ELECTRO HARMONIX Bass Big Muff",
+    photo: "/images/machines/ELECTRO HARMONIX Bass Big Muff.jpg",
+    operation: "MOD : Rajout d'un potard de medium pour plus de présence",
+    categorie: "Pédale"
+  },
+  {
+    nom: "BLACKSTAR HT-5R",
+    photo: "/images/machines/BLACKSTAR HT-5R.jpg",
+    operation: "Remplacement des transisors drivers et rajout de refroidisseurs pour palier à un problème de conception connu sur ce modèle",
+    categorie: "Ampli"
+  },
+  {
+    nom: "EHX Doctor Q",
+    photo: "/images/machines/EHX Doctor Q.jpg",
+    operation: "Remplacement de condensateurs morts et recalibrage du "Qwack"",
+    categorie: "Pédale"
+  },
+  {
+    nom: "E-MU Emax HD",
+    photo: "/images/machines/EHX Doctor Q.jpg",
+    operation: "La carte d'alim a du être entièrement ressoudée (et recapée) car elle deconnectait pendant l'utilisation",
+    categorie: "Sampleur"
+  },
+  {
+    nom: "NOVATION SUPERNOVA 2",
+    photo: "/images/machines/NOVATION SUPERNOVA 2.jpg",
+    operation: "Remplacement de la puce DAC hors service par une puce neuve et plus moderne",
+    categorie: "Synthétiseur"
+  },
+  {
+    nom: "STRYMON El capistan",
+    photo: "/images/machines/STRYMON El capistan.jpg",
+    operation: "Remplacement d'un potard mort (problème récurrent sur les STRYMON)",
+    categorie: "Pédale"
+  },
+  // Copiez-collez un bloc { } ci-dessus pour ajouter une machine
+];
+---
+
+<BaseLayout
+  title="Machines réparées - Réalisations atelier | ShindoTech Paris"
+  description="Découvrez les machines audio passées par l'atelier : amplis, synthétiseurs, pédales d'effets, consoles. Réparations réalisées à Paris 20e et par correspondance France entière."
+  keywords="réparations audio réalisées, références atelier audio, machines réparées synthétiseur ampli pédale, ShindoTech Paris"
+>
+
+  <header class="header-banner"></header>
+
+  <!-- Intro -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>L'atelier en action</h2>
+      <p>Voici quelques machines passées par l'atelier.</p>
+      <br>
+      <a href="/#contact" class="cta-button">Vous avez une panne ? Contactez-moi</a>
+    </div>
+  </section>
+
+  <!-- Grille machines -->
+  <section class="process">
+    <div class="process-container">
+
+      <div class="machines-grid">
+        {machines.map((machine) => (
+          <div class="machine-card">
+            <div class="machine-photo-wrap">
+              <img src={machine.photo} alt={`Réparation ${machine.nom}`} loading="lazy" />
+              <span class="machine-categorie">{machine.categorie}</span>
+            </div>
+            <div class="machine-body">
+              <h3 class="machine-nom">{machine.nom}</h3>
+              <p class="machine-operation">{machine.operation}</p>
+              <span class="machine-badge">Réparé ✓</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Message si la liste est vide -->
+      {machines.length === 0 && (
+        <p style="text-align:center; color: var(--text-light); padding: 3rem 0;">
+          Les premières réalisations arrivent bientôt.
+        </p>
+      )}
+
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ---- Grille ---- */
+  .machines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0 3rem;
+  }
+
+  /* ---- Carte machine ---- */
+  .machine-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 2px solid transparent;
+  }
+
+  .machine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent-color);
+  }
+
+  /* ---- Photo ---- */
+  .machine-photo-wrap {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: var(--bg-light);
+  }
+
+  .machine-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .machine-card:hover .machine-photo-wrap img {
+    transform: scale(1.04);
+  }
+
+  /* ---- Badge catégorie (sur la photo) ---- */
+  .machine-categorie {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(26, 77, 109, 0.85);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    letter-spacing: 0.03em;
+  }
+
+  /* ---- Corps texte ---- */
+  .machine-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  .machine-nom {
+    font-size: 1.1rem;
+    font-variant: small-caps;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .machine-operation {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  /* ---- Badge "Réparé ✓" ---- */
+  .machine-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #2a7a4f;
+    background: #e6f4ed;
+    padding: 3px 12px;
+    border-radius: 20px;
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 768px) {
+    .machines-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
