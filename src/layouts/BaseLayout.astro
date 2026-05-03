@@ -134,35 +134,37 @@ const { title, description, keywords } = Astro.props;
     }
 
     .main-nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      background: var(--primary-color);
-      padding: 0.6rem 1rem;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: transparent; /* ← plus de fond, laisse la texture */
+  padding: 0.8rem 1rem;
+}
 
-    .main-nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      padding: 0.4rem 1.2rem;
-      border-radius: 20px;
-      transition: var(--transition);
-    }
+.main-nav a {
+  color: black; /* ← police noire */
+  text-decoration: none;
+  font-size: 1.05rem; /* ← plus grosse */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* ← même police que le body */
+  font-weight: 600;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  transition: var(--transition);
+}
 
-    .main-nav a:hover,
-    .main-nav a[aria-current="page"] {
-      background: rgba(255, 255, 255, 0.2);
-    }
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  background: rgba(0, 0, 0, 0.08);
+}
 
-    .main-nav a + a::before {
-      content: "◆";
-      color: rgba(255, 255, 255, 0.35);
-      font-size: 0.5rem;
-      margin-right: 1rem;
-      vertical-align: middle;
-  }
+/* Le losange est un élément séparé entre les liens */
+.main-nav span.sep {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 0.5rem;
+  vertical-align: middle;
+  pointer-events: none;
+}
 
     /* Hero Section avec texture */
     .hero {
@@ -670,9 +672,10 @@ const { title, description, keywords } = Astro.props;
 </head>
 <body>
   <nav class="main-nav">
-    <a href="/">Accueil</a>
-    <a href="/machines">Réalisations</a>
-  </nav>
+  <a href="/">Accueil</a>
+  <span class="sep">◆</span>
+  <a href="/machines">Réalisations</a>
+</nav>
   <slot />
   
   <!-- Footer -->
