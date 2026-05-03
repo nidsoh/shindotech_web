@@ -671,11 +671,12 @@ const { title, description, keywords } = Astro.props;
   })} />
 </head>
 <body>
+  <header class="header-banner"></header>
   <nav class="main-nav">
-  <a href="/">Accueil</a>
-  <span class="sep">◆</span>
-  <a href="/machines">Réalisations</a>
-</nav>
+    <a href="/">Accueil</a>
+    <span class="sep">◆</span>
+    <a href="/machines">Réalisations</a>
+  </nav>
   <slot />
   
   <!-- Footer -->
