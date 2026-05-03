@@ -3,76 +3,87 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const machines = [
   {
-    nom: "Peavey Classic 30",
-    photo: "/images/machines/PEAVEY Classic 30.jpg",
-    operation: "Premier ampli passé par le (proto) atelier! Il avait un buzz horrible, resolu en recapant l'alimentation et surtout en refaisant une bonne moitié des soudures...",
-    categorie: "Amplis"
-  },
-  {
-    nom: "Omnitronic TRM-202 mk3",
-    photo: "/images/machines/OMNITRONIC TRM-202.jpg",
-    operation: "Ressoudure de la prise de masse et nettoyant complet des potards.",
-    categorie: "Table de mixage"
-  },
-  {
-    nom: "Roland SP-606",
-    photo: "/images/machines/ROLAND SP-606.jpg",
-    operation: "Changement des condensateurs d'alimentation et de sorties.",
-    categorie: "Sampleur"
-  },
-  {
-    nom: "EDEN WTDI",
-    photo: "/images/machines/EDEN WTDI.jpg",
-    operation: "Remplacement d'un double AOP mort dans le chemin du signal",
+    nom: "STRYMON El capistan",
+    photo: "/images/machines/STRYMON El capistan.jpg",
+    operation: "Remplacement d'un potard mort (problème récurrent sur les STRYMON)",
     categorie: "Pédale"
   },
-  {
-    nom: "KORG Electribe R-mk II",
-    photo: "/images/machines/KORG Electribe R-mk II.jpg",
-    operation: "Cette machine a été tabassée par son précédent proprio, plusieurs potards à changer et chassis à remettre droit",
-    categorie: "BAR"
-  },
-  {
-    nom: "Mackie M1402-VLZ3",
-    photo: "/images/machines/MACKIE M1402-vlz3.jpg",
-    operation: "Matériel récupéré au bord de la mort. La totalité des amplis AOP de la partie master étaient en court circuits. Une bombe contact entière a été nécessaire afin de minimiser les craquements des potards et faders",
-    categorie: "Table de mixage"
-  },
-  {
-    nom: "ELECTRO HARMONIX Bass Big Muff",
-    photo: "/images/machines/ELECTRO HARMONIX Bass Big Muff.jpg",
-    operation: "MOD : Rajout d'un potard de medium pour plus de présence",
-    categorie: "Pédale"
-  },
-  {
-    nom: "BLACKSTAR HT-5R",
-    photo: "/images/machines/BLACKSTAR HT-5R.jpg",
-    operation: "Remplacement des transisors drivers et rajout de refroidisseurs pour palier à un problème de conception connu sur ce modèle",
-    categorie: "Ampli"
-  },
-  {
-    nom: "EHX Doctor Q",
-    photo: "/images/machines/EHX Doctor Q.jpg",
-    operation: "Remplacement de condensateurs morts et recalibrage du Qwack",
-    categorie: "Pédale"
-  },
-  {
-    nom: "E-MU Emax HD",
-    photo: "/images/machines/EHX Doctor Q.jpg",
-    operation: "La carte d'alim a du être entièrement ressoudée (et recapée) car elle deconnectait pendant l'utilisation",
-    categorie: "Sampleur"
-  },
+
   {
     nom: "NOVATION SUPERNOVA 2",
     photo: "/images/machines/NOVATION SUPERNOVA 2.jpg",
     operation: "Remplacement de la puce DAC hors service par une puce neuve et plus moderne",
     categorie: "Synthétiseur"
   },
+
   {
-    nom: "STRYMON El capistan",
-    photo: "/images/machines/STRYMON El capistan.jpg",
-    operation: "Remplacement d'un potard mort (problème récurrent sur les STRYMON)",
+    nom: "E-MU Emax HD",
+    photo: "/images/machines/E-MU_Emax_HD.jpg",
+    operation: "La carte d'alim a du être entièrement ressoudée (et recapée) car elle deconnectait pendant l'utilisation",
+    categorie: "Sampleur"
+  },
+
+  {
+    nom: "EHX Doctor Q",
+    photo: "/images/machines/EHX Doctor Q.jpg",
+    operation: "Remplacement de condensateurs morts et recalibrage du Qwack",
     categorie: "Pédale"
+  },
+
+  {
+    nom: "BLACKSTAR HT-5R",
+    photo: "/images/machines/BLACKSTAR HT-5R.jpg",
+    operation: "Remplacement des transisors drivers et rajout de refroidisseurs pour palier à un problème de conception connu sur ce modèle",
+    categorie: "Ampli"
+  },
+
+  {
+    nom: "ELECTRO HARMONIX Bass Big Muff",
+    photo: "/images/machines/ELECTRO HARMONIX Bass Big Muff.jpg",
+    operation: "MOD : Rajout d'un potard de medium pour plus de présence",
+    categorie: "Pédale"
+  },
+
+  {
+    nom: "Mackie M1402-VLZ3",
+    photo: "/images/machines/MACKIE M1402-vlz3.jpg",
+    operation: "Matériel récupéré au bord de la mort. La totalité des amplis AOP de la partie master étaient en court circuits. Une bombe contact entière a été nécessaire afin de minimiser les craquements des potards et faders",
+    categorie: "Table de mixage"
+  },
+
+  {
+    nom: "KORG Electribe R-mk II",
+    photo: "/images/machines/KORG Electribe R-mk II.jpg",
+    operation: "Cette machine a été tabassée par son précédent proprio, plusieurs potards à changer et chassis à remettre droit",
+    categorie: "BAR"
+  },
+
+  {
+    nom: "EDEN WTDI",
+    photo: "/images/machines/EDEN WTDI.jpg",
+    operation: "Remplacement d'un double AOP mort dans le chemin du signal",
+    categorie: "Pédale"
+  },
+
+  {
+    nom: "Roland SP-606",
+    photo: "/images/machines/ROLAND SP-606.jpg",
+    operation: "Changement des condensateurs d'alimentation et de sorties.",
+    categorie: "Sampleur"
+  },
+
+  {
+    nom: "Omnitronic TRM-202 mk3",
+    photo: "/images/machines/OMNITRONIC TRM-202.jpg",
+    operation: "Ressoudure de la prise de masse et nettoyant complet des potards.",
+    categorie: "Table de mixage"
+  },
+
+  {
+    nom: "Peavey Classic 30",
+    photo: "/images/machines/PEAVEY Classic 30.jpg",
+    operation: "Premier ampli passé par le (proto) atelier! Il avait un buzz horrible, resolu en recapant l'alimentation et surtout en refaisant une bonne moitié des soudures...",
+    categorie: "Amplis"
   },
   // Copiez-collez un bloc { } ci-dessus pour ajouter une machine
 ];
@@ -90,9 +101,10 @@ const machines = [
   <section class="hero">
     <div class="hero-content">
       <h2>L'atelier en action</h2>
-      <p>Voici quelques machines passées par l'atelier.</p>
+      <p>Voici une liste non exhaustive des machines passée dans l'atelier.
+      Amplis, synthétiseurs, pédales, consoles - cela donne un aperçu de la diversité des équipements pris en charge</p>
       <br>
-      <a href="/#contact" class="cta-button">Vous avez une panne ? Contactez-moi</a>
+      <a href="/#contact" class="cta-button">Contact</a>
     </div>
   </section>
 
@@ -110,7 +122,6 @@ const machines = [
             <div class="machine-body">
               <h3 class="machine-nom">{machine.nom}</h3>
               <p class="machine-operation">{machine.operation}</p>
-              <span class="machine-badge">Réparé ✓</span>
             </div>
           </div>
         ))}
