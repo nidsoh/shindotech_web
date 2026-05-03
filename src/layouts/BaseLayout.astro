@@ -155,7 +155,7 @@ const { title, description, keywords } = Astro.props;
     }
 
     .hero p {
-      font-size: 1.05rem;
+      font-size: 1.2rem;
       margin-bottom: 0.2rem;
       font-family: "Roboto", sans-serif;
     }
@@ -338,6 +338,7 @@ const { title, description, keywords } = Astro.props;
     .process-step p, .process-step ul {
       margin-top: 1rem;
       color: var(--text-light);
+      font-size: 1.05rem;
     }
 
     .process-step ul {
@@ -375,6 +376,12 @@ const { title, description, keywords } = Astro.props;
       border: 3px solid var(--bg-light);
       transition: var(--transition);
       text-align: center;
+    }
+
+    /* AJOUTER à la suite de .option-card */
+    .option-card p {
+      font-size: 1.05rem;  /* ← ajouter ce bloc */
+      color: var(--text-light);
     }
     
     .option-card:hover {
