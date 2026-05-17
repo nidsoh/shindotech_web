@@ -11,11 +11,48 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Réparation d'amplificateurs pour instruments - Paris 20e </h1>
-      <p>Votre ampli grésille, coupe ou ne s'allume plus ? Je répare tous types d'amplis audio à Paris 20e : combos, têtes, amplis basse, clavier, acoustique, etc. Je travaille à la fois sur les amplificateurs à lampes ou à transistor.</p>
-      <p>Mon atelier est situé à Paris 20e vers Porte de Montreuil. Pour les amplis, je privilégie les réparations en main propre, mais l'envoi d'une tête reste possible si vous le souhaitez.</p>
+      <h2>Réparation d'amplificateurs pour instruments </h2>
+      <p>Votre ampli grésille, coupe ou ne s'allume plus ? Je répare tous types d'amplis audio : combos, têtes, amplis basse, clavier, acoustique, etc. Je travaille à la fois sur les amplificateurs à lampes ou à transistor.</p>
+      <p>Mon atelier est situé à Paris 20e vers Porte de Montreuil. Pour les amplis, je privilégie les réparations en main propre, mais l'envoi d'une tête reste possible si vous le souhaitez (à votre charge de faire un emballage bien costaud)</p>
       <br>
       <a href="#contact" class="cta-button">DEMANDER UN DEVIS</a>
+    </div>
+  </section>
+
+   <!-- Tarifs -->
+  <section class="process" style="background: var(--bg-secondary, #d3e0f8);">
+    <div class="process-container">
+      <h2 class="section-title">Tarifs et délais</h2>
+      <p style="margin-bottom: 1.5rem;">Les réparations sont facturées sur une base de <strong>50 €/heure</strong>. À titre indicatif :</p>
+
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.5rem;">
+        <thead>
+          <tr style="background: var(--accent-color, #22229b); color: white;">
+            <th style="padding: 0.75rem 1rem; text-align: left;">Type d'intervention</th>
+            <th style="padding: 0.75rem 1rem; text-align: left;">Fourchette (hors composants)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #e0e0e0;">
+            <td style="padding: 0.75rem 1rem;">Diagnostic seul</td>
+            <td style="padding: 0.75rem 1rem;">40 € <em>(déduit si réparation)</em></td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e0e0e0; background: #f5f5f5;">
+            <td style="padding: 0.75rem 1rem;">Remplacement de lampes + bias</td>
+            <td style="padding: 0.75rem 1rem;">50–80 €</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e0e0e0;">
+            <td style="padding: 0.75rem 1rem;">Recapping alimentation</td>
+            <td style="padding: 0.75rem 1rem;">50–80 €</td>
+          </tr>
+          <tr style="background: #f5f5f5;">
+            <td style="padding: 0.75rem 1rem;">Réparation ampli HS</td>
+            <td style="padding: 0.75rem 1rem;">80–150 €</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Chaque intervention fait l'objet d'un <strong>devis détaillé avant travaux</strong>. Délai habituel : <strong>deux semaines</strong> (hors commande de composants spécifiques).</p>
     </div>
   </section>
 
@@ -56,42 +93,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Tarifs -->
-  <section class="process" style="background: var(--bg-secondary, #f9f9f9);">
-    <div class="process-container">
-      <h2 class="section-title">Tarifs et délais</h2>
-      <p style="margin-bottom: 1.5rem;">Les réparations sont facturées sur une base de <strong>50 €/heure</strong>. À titre indicatif :</p>
-
-      <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.5rem;">
-        <thead>
-          <tr style="background: var(--accent-color, #22229b); color: white;">
-            <th style="padding: 0.75rem 1rem; text-align: left;">Type d'intervention</th>
-            <th style="padding: 0.75rem 1rem; text-align: left;">Fourchette (hors composants)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom: 1px solid #e0e0e0;">
-            <td style="padding: 0.75rem 1rem;">Diagnostic seul</td>
-            <td style="padding: 0.75rem 1rem;">40 € <em>(déduit si réparation)</em></td>
-          </tr>
-          <tr style="border-bottom: 1px solid #e0e0e0; background: #f5f5f5;">
-            <td style="padding: 0.75rem 1rem;">Remplacement de lampes + bias</td>
-            <td style="padding: 0.75rem 1rem;">50–80 €</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #e0e0e0;">
-            <td style="padding: 0.75rem 1rem;">Recapping alimentation</td>
-            <td style="padding: 0.75rem 1rem;">50–80 €</td>
-          </tr>
-          <tr style="background: #f5f5f5;">
-            <td style="padding: 0.75rem 1rem;">Réparation ampli HS</td>
-            <td style="padding: 0.75rem 1rem;">80–150 €</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>Chaque intervention fait l'objet d'un <strong>devis détaillé avant travaux</strong>. Délai habituel : <strong>deux semaines</strong> (hors commande de composants spécifiques).</p>
-    </div>
-  </section>
+ 
 
   <!-- Marques -->
   <section class="process">
