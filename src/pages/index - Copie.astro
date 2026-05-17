@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="ShindoTech - Réparation électronique audio | Amplis Synthétiseurs | Musiciens & Studios | Paris | France entière"
+  description="Atelier de réparation électronique audio à Paris 20e. Amplis, synthétiseurs, pédales, tables de mixage, préamplis, compresseurs, matériel studio. Service par correspondance France entière. Dépôt main propre Île-de-France. Spécialiste musiciens et studios d'enregistrement."
+  keywords="réparation matériel audio France, réparation studio enregistrement, technicien audio correspondance, réparation synthétiseur France, réparation ampli France, réparation préampli, réparation compresseur, réparation table mixage, électronique audio musicien, réparation matériel production musicale, atelier audio Paris, réparation outboard studio, maintenance matériel audio professionnel"
+>
+  <!-- Header -->
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Atelier de réparation de matériel audio pour musicien.nes et studios</h2>
+      <p>Réparateur spécialisé en <strong>électronique audio</strong>, j'interviens sur tout types d'équipements (amplis, pédales, synthés, boîtes à rythmes...) pour leur redonner vie. 
+        N'hésitez pas à me contacter, que ce soit pour une <strong>réparation</strong>, pour une opération de <strong>maintenance</strong> ou pour une demande de <strong>modification</strong>.</p>
+        
+      <p style="font-size: 1.05rem; margin-top: 1rem; font-weight: 600; color: rgb(34, 34, 151);">🪛 Dépôt sur Paris 20e • 📦 Service par correspondance en France métropolitaine</p>
+      <br>
+      <a href="#contact" class="cta-button">DEMANDER UN DEVIS</a>
+      
+      <!-- Photos de l'atelier -->
+      <div class="workshop-photos">
+        <img src="/images/figure1a.jpeg" alt="Montage Champ TT" loading="lazy">
+        <img src="/images/figure1b.jpg" alt="Rep Sono" loading="lazy">
+        <img src="/images/figure1c.jpeg" alt="Rep Minibrute" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process">
+    <div class="process-container">
+      <h2 class="section-title">Déroulement de la prise en charge</h2>
+      
+      <div class="process-step">
+        <span class="step-number">1</span>
+        <h3>Demande de réparation</h3>
+        <p>Utilisez le <a href="#contact" style="color: var(--accent-color); font-weight: 600;">formulaire de contact</a> ci-dessous afin de décrire votre problème, je vous répondrai sur la faisabilité de votre demande avec <strong>une estimation tarifaire</strong>.</p>
+      </div>
+
+      <div class="process-step">
+        <span class="step-number">2</span>
+        <h3>Remise du matériel</h3>
+        <div class="deposit-options">
+          <div class="option-card">
+            <div class="option-icon">🪛</div>
+            <h4>Dépôt main propre</h4>
+            <p><strong>Île-de-France :</strong> Déposez directement votre matériel sur RDV à Paris 20e, je peux également me déplacer en IDF pour récupérer le matériel (frais de déplacement appliqués).</p>
+          </div>
+          
+          <div class="option-card">
+            <div class="option-icon">📦</div>
+            <h4>Envoi par transporteur</h4>
+            <p><strong>France métropolitaine :</strong> Envoyez votre matériel par le transporteur de votre choix (Mondial Relay, Chronopost, Colissimo, etc.).</p>
+            <a href="/shipping" class="option-link">En savoir plus →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <span class="step-number">3</span>
+        <h3>Diagnostic et devis</h3>
+        <p>Après analyse de la machine et de la panne, je vous communiquerai un <strong>devis détaillé</strong>. Les réparations sont facturées sur une base de <strong>50€/heure</strong> — à titre indicatif, 
+        comptez 50-70€ pour une pédale et 100-150€ pour un ampli.</p>
+      </div>
+
+      <div class="process-step">
+        <span class="step-number">4</span>
+        <h3>Réparation et restitution</h3>
+        <p>Après votre accord, intervention dans un délai de <strong>deux semaines</strong> (sauf pour les réparations nécessitant la commande de composants spécifiques). </p>
+        <p>Paiement en <strong>espèce, CB ou virement bancaire</strong> lors de la restitution sur rendez-vous (pour les envois postaux, le paiement intervient 
+avant le renvoi du matériel).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <h2 class="section-title">Demander un devis</h2>
+      
+      <form action="https://formsubmit.co/shindo.tech.paris@gmail.com" method="POST">
+        <!-- Configuration FormSubmit -->
+        <input type="hidden" name="_subject" value="Nouvelle demande ShindoTech">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_template" value="table">
+        
+        <div class="form-group">
+          <label for="name">Nom *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+          <label for="service-type">Type de remise du matériel *</label>
+          <select id="service-type" name="service-type" required>
+            <option value="">Sélectionnez...</option>
+            <option value="Remise en main propre">Remise en main propre (Paris)</option>
+            <option value="Par correspondance">Par correspondance (France entière)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="equipment">Type de matériel *</label>
+          <select id="equipment" name="equipment" required>
+            <option value="">Sélectionnez...</option>
+            <option value="Amplificateur">Amplificateur</option>
+            <option value="Pédale d'effet">Pédale d'effet</option>
+            <option value="Synthétiseur">Synthétiseur / Clavier</option>
+            <option value="Table de mixage">Table de mixage</option>
+            <option value="Préampli / Compresseur">Préampli / Compresseur / Outboard</option>
+            <option value="Interface audio">Interface audio / Convertisseur</option>
+            <option value="Autre matériel audio">Autre matériel audio</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="modele">Modèle *</label>
+          <input type="text" id="modele" name="modele" placeholder="Exemple : Electro Harmonix Big Muff USA " required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Description du problème *</label>
+          <textarea id="message" name="message" required placeholder="Décrivez le problème rencontré ou toute autre demande (modification, maintenance...). Soyez le plus précis possible svp 🙏 "></textarea>
+        </div>
+
+        <button type="submit">Envoyer la demande</button>
+      </form>
+      <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-light); font-style: italic;">
+        💡 Si le formulaire renvoie une page d'erreur, désactivez temporairement votre VPN ou contactez-moi par email : shindo.tech.paris[at]gmail.com
+      </p>
+    </div>
+  </section>
+</BaseLayout>
