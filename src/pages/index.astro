@@ -65,7 +65,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p>Les réparations sont facturées sur une base de <strong>70€/heure</strong></p>
         <p>Les devis sont <strong>gratuits</strong>, sauf pour les appareils rares ou spécifiques. 
         Les réparations sont effectuées <strong>directement</strong> dans la limite de 75 € (1 heure de main-d’œuvre + 5 € de composants), ensuite un devis est soumis à votre accord avant toute <strong>intervention supplémentaire</strong>.</p>
-        <p>Les interventions très simples (petite soudure de fil, remplacement de pile, etc.) sont facturées 40 € + prix des composants.</p>
+        <p>Les interventions très simples (petite soudure de fil, etc.) sont facturées 40 € + prix des composants.</p>
       </div>
 
       <div class="process-step">
@@ -84,8 +84,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="contact-container">
       <h2 class="section-title">Demander un devis</h2>
       
-      <form action="https://formsubmit.co/shindo.tech.paris@gmail.com" method="POST">
+      <form action="https://api.web3forms.com/submit" method="POST">
         <!-- Configuration FormSubmit -->
+        <input type="hidden" name="access_key" value="d4cf856a-cd65-4d94-aad5-0082d892046d">
         <input type="hidden" name="_subject" value="Nouvelle demande ShindoTech">
         <input type="hidden" name="_captcha" value="true">
         <input type="hidden" name="_template" value="table">
