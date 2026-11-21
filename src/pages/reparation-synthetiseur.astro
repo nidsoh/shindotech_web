@@ -25,15 +25,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Tarifs -->
-  <section class="process">
-    <div class="process-container">
-      <h2 class="section-title">Tarifs et délais</h2>
-      <p style="margin-bottom: 1rem;">Les instruments électroniques sont variés — la complexité d'une réparation peut aller du simple remplacement de jack à une intervention longue sur un circuit analogique ou numérique. Chaque demande fait l'objet d'un <strong>devis personnalisé après diagnostic</strong>.</p>
-      <p style="margin-bottom: 1.5rem;">Tarif horaire : <strong>50 €/heure</strong>. À titre indicatif, comptez 40 € pour un diagnostic (déduit si réparation), 40–80 € pour une réparation de connectique ou de potards, davantage pour une intervention sur les circuits internes.</p>
-      <p>Délai habituel : <strong>deux semaines</strong> (hors commande de composants).</p>
-    </div>
-  </section>
 
   <!-- Pannes courantes -->
   <section class="process">
@@ -93,8 +84,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="contact-container">
       <h2 class="section-title">Demander un devis</h2>
       
-      <form action="https://formsubmit.co/shindo.tech.paris@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Nouvelle demande ShindoTech — Synthétiseur">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- Configuration FormSubmit -->
+        <input type="hidden" name="access_key" value="d4cf856a-cd65-4d94-aad5-0082d892046d">
+        <input type="hidden" name="_subject" value="Nouvelle demande ShindoTech">
         <input type="hidden" name="_captcha" value="true">
         <input type="hidden" name="_template" value="table">
         
@@ -128,7 +121,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <option value="">Sélectionnez...</option>
             <option value="Amplificateur">Amplificateur</option>
             <option value="Pédale d'effet">Pédale d'effet</option>
-            <option value="Synthétiseur" selected>Synthétiseur / Clavier</option>
+            <option value="Synthétiseur">Synthétiseur / Clavier</option>
             <option value="Table de mixage">Table de mixage</option>
             <option value="Préampli / Compresseur">Préampli / Compresseur / Outboard</option>
             <option value="Interface audio">Interface audio / Convertisseur</option>
@@ -138,12 +131,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <div class="form-group">
           <label for="modele">Modèle *</label>
-          <input type="text" id="modele" name="modele" placeholder="Exemple : Korg Minilogue XD" required>
+          <input type="text" id="modele" name="modele" placeholder="Exemple : Electro Harmonix Big Muff USA " required>
         </div>
 
         <div class="form-group">
           <label for="message">Description du problème *</label>
-          <textarea id="message" name="message" required placeholder="Décrivez le problème rencontré ou toute autre demande (modification, maintenance...). Soyez le plus précis possible svp 🙏"></textarea>
+          <textarea id="message" name="message" required placeholder="Décrivez le problème rencontré ou toute autre demande (modification, maintenance...). Soyez le plus précis possible svp 🙏 "></textarea>
         </div>
 
         <button type="submit">Envoyer la demande</button>

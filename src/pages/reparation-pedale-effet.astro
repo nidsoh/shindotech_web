@@ -26,38 +26,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
- <!-- Tarifs -->
-  <section class="process">
-    <div class="process-container">
-      <h2 class="section-title">Tarifs et délais</h2>
-      <p style="margin-bottom: 1.5rem;">Les réparations sont facturées sur une base de <strong>50 €/heure</strong>. À titre indicatif :</p>
-      <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.5rem;">
-        <thead>
-          <tr style="background: var(--accent-color, #22229b); color: white;">
-            <th style="padding: 0.75rem 1rem; text-align: left;">Type d'intervention</th>
-            <th style="padding: 0.75rem 1rem; text-align: left;">Fourchette (hors composants)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom: 1px solid #e0e0e0;">
-            <td style="padding: 0.75rem 1rem;">Diagnostic seul</td>
-            <td style="padding: 0.75rem 1rem;">30 € <em>(déduit si réparation)</em></td>
-          </tr>
-          <tr style="border-bottom: 1px solid #e0e0e0; background: #f5f5f5;">
-            <td style="padding: 0.75rem 1rem;">Remplacement switch / jack / DC</td>
-            <td style="padding: 0.75rem 1rem;">50 €</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #e0e0e0;">
-            <td style="padding: 0.75rem 1rem;">Réparation autre</td>
-            <td style="padding: 0.75rem 1rem;">50-100 €</td>
-          </tr>
-          
-        </tbody>
-      </table>
-
-      <p>Chaque intervention fait l'objet d'un <strong>devis détaillé avant travaux</strong>. Délai habituel : <strong>deux semaines</strong> (hors commande de composants spécifiques).</p>
-    </div>
-  </section>
 
   <!-- Pannes courantes -->
   <section class="process">
@@ -125,8 +93,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="contact-container">
       <h2 class="section-title">Demander un devis</h2>
       
-      <form action="https://formsubmit.co/shindo.tech.paris@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Nouvelle demande ShindoTech — Pédale d'effet">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- Configuration FormSubmit -->
+        <input type="hidden" name="access_key" value="d4cf856a-cd65-4d94-aad5-0082d892046d">
+        <input type="hidden" name="_subject" value="Nouvelle demande ShindoTech">
         <input type="hidden" name="_captcha" value="true">
         <input type="hidden" name="_template" value="table">
         
@@ -159,7 +129,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <select id="equipment" name="equipment" required>
             <option value="">Sélectionnez...</option>
             <option value="Amplificateur">Amplificateur</option>
-            <option value="Pédale d'effet" selected>Pédale d'effet</option>
+            <option value="Pédale d'effet">Pédale d'effet</option>
             <option value="Synthétiseur">Synthétiseur / Clavier</option>
             <option value="Table de mixage">Table de mixage</option>
             <option value="Préampli / Compresseur">Préampli / Compresseur / Outboard</option>
@@ -170,12 +140,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <div class="form-group">
           <label for="modele">Modèle *</label>
-          <input type="text" id="modele" name="modele" placeholder="Exemple : Boss DD-8" required>
+          <input type="text" id="modele" name="modele" placeholder="Exemple : Electro Harmonix Big Muff USA " required>
         </div>
 
         <div class="form-group">
           <label for="message">Description du problème *</label>
-          <textarea id="message" name="message" required placeholder="Décrivez le problème rencontré ou toute autre demande (modification, maintenance...). Soyez le plus précis possible svp 🙏"></textarea>
+          <textarea id="message" name="message" required placeholder="Décrivez le problème rencontré ou toute autre demande (modification, maintenance...). Soyez le plus précis possible svp 🙏 "></textarea>
         </div>
 
         <button type="submit">Envoyer la demande</button>
